@@ -12,8 +12,10 @@ public class Quadcopter extends Helicopter{
 	}
 	
 	Quadcopter() {
+		
+		
 		this.cylinders = 0;
-		this.creationYear = 0;
+		this.creationYear = 0; 
 		this.passengerCapacity = 0;
 	}
 }
