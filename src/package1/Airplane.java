@@ -1,9 +1,9 @@
 package package1;
 
 public class Airplane {
-	public String band;
-	public double price;
-	public int horsepower;
+	protected String band;
+	protected double price;
+	protected int horsepower;
 
 	public Airplane(String band, double price, int horsepower){
 		this.band = band;
@@ -19,9 +19,35 @@ public class Airplane {
 		this("", 0.0, 0);
 	}
 	
+	public String getBand() {
+		return band;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	public int getHorsepower() {
+		return horsepower;
+	}
+	
+	public void setBand(String band) {
+		this.band = band;
+	}
+	
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	public void setHorsepower(int horsepower) {
+		this.horsepower = horsepower;
+	}
+	
 	@Override
 	public String toString() {
-		 return "Airplane => Band : "+band + "    Price : " + price + "    Horsepower : " + horsepower;
+		 return "Airplane, it is manufactured by "+ band 
+				 + ", the price is " + String.format("%.2f",price) + "$"
+				 + ", horsepower is " + horsepower+"hp";
 	}
 	
 	@Override
